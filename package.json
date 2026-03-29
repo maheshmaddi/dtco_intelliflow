@@ -1,0 +1,14 @@
+{
+  "name": "dtco-intelliflow",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:be\" \"npm run dev:fe\"",
+    "dev:be": "cd backend && node --watch server.js",
+    "dev:fe": "cd frontend && npx vite",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "start": "cd backend && node server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
